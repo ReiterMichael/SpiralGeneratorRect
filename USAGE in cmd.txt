@@ -1,0 +1,1 @@
+python spiral_generator_rect.py -t 10 -oh 80 -ow 40 -iw 20 -s
