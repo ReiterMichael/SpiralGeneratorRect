@@ -3,15 +3,15 @@ from svgpathtools import Line, Path, wsvg
 
 """
 
-Archimedean spiral generator for embroidered speaker coils.
+Rectangular spiral generator for embroidered speaker coils.
 You need svgpathtools to run this script. Install it via pip using this command:
 pip install svgpathtools
 
 Usage:
-./spiral_generator.py [-h] -o <float> -i <float> -t <int> [-r] [-smin <float>] [-smax <float>] [-s]
+./spiral_generator_rect.py [-h] -oh <float> -ow <float> -iw <float> -t <int> [-r] [-smin <float>] [-smax <float>] [-s]
 
 Example:
-./spiral_generator.py -t 78 -o 50 -i 11 -smin 2 -smax 4 -r -s
+./spiral_generator_rect.py -t 10 -oh 80 -ow 40 -iw 20 -s
 
 
 Optional arguments:
@@ -24,12 +24,11 @@ Optional arguments:
   -smax       max stitch length, default = 2 <float>
   -r          reverse path direction from outward to inward
   -s          save to svg
+  
+Contact:
+michael.reiter@fh-hagenberg.at
 
-Improvement suggestions:
-thomas.preindl(at)fh-hagenberg.at
-
-More:
-http://mi-lab.org/sonoflex-embroidered-speakers/
+Based on spiral-generator by thomas.preindl(at)fh-hagenberg.at
 
 """
 
@@ -47,7 +46,6 @@ def spiral(OH, OW, IW, turns, reverse=False):
     print("turn spacing:\t", round(spacing, 4), "mm")
 
     coords = []
-    # thetas = [0, math.pi/2, math.pi, 3*math.pi/2]
     thetas = [math.pi / 4, 3 * math.pi / 4, 5 * math.pi / 4, 7 * math.pi / 4]
 
     for i in range(turns):
@@ -65,8 +63,7 @@ def spiral(OH, OW, IW, turns, reverse=False):
     if reverse:
         p = p.reversed()
 
-    # clackson scroll formula for estimating yarn length
-    # print("estimated path length: ", round(math.pi * spacing * turns * turns), "mm")
+    # Pathlength
     print("path length:\t", round(p.length()), "mm")
     print("points:\t\t", len(coords))
 
