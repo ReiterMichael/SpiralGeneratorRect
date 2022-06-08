@@ -15,7 +15,7 @@ pip install svgpathtools
 
 ### Optional arguments:
   -h, --help  show help message  
-  -t          number of turns <int>  
+  -t          |number of turns <int>  
   -oh         outer height <float>  
   -ow         outer width <float>  
   -iw         inner width <float>  
