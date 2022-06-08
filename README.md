@@ -14,16 +14,16 @@ pip install svgpathtools
 
 
 ### Optional arguments:
-|  -h, --help  show help message  
-|  -t          number of turns <int>  
-|  -oh         outer height <float>  
-|  -ow         outer width <float>  
-|  -iw         inner width <float>  
-|  -smin       min stitch length, default = 2 <float>  
-|  -smax       max stitch length, default = 2 <float>  
-|  -r          reverse path direction from outward to inward  
-|  -s          save to svg  
-  
+  -h, --help  show help message  
+  -t          number of turns <int>  
+  -oh         outer height <float>  
+  -ow         outer width <float>  
+  -iw         inner width <float>  
+  -smin       min stitch length, default = 2 <float>  
+  -smax       max stitch length, default = 2 <float>  
+  -r          reverse path direction from outward to inward  
+  -s          save to svg  
+ 
 ### Contact:
 michael.reiter@fh-hagenberg.at
 
